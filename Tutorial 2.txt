@@ -73,7 +73,7 @@ Tutorial 02
    def postFixd(value: Int): Int
 
   a) scala> println(preFixdec(b)*a+c*postFixd(d))
-   24
+     24
     
     
   b)  scala> println(postFixd(a))  

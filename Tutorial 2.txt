@@ -63,29 +63,31 @@ Tutorial 02
    scala> var k:Float = 4.3f
    var k: Float = 4.3
 
-   scala> b=b-1
-   // mutated b
+   scala> def preFix(value:Int):Int = value +1
+   def preFix(value: Int): Int
 
-   scala> d =d-1
-   // mutated d
+   scala> def preFixdec(value:Int):Int = value -1
+   def preFixdec(value: Int): Int
 
-   scala> println(b*a+c*d)
-   20
+   scala> def postFixd(value:Int):Int = value
+   def postFixd(value: Int): Int
 
-   scala> a=a+1
-   // mutated a
+  a) scala> println(preFixdec(b)*a+c*postFixd(d))
+   24
+    
+    
+  b)  scala> println(postFixd(a))  
+      2
+    
+  c)  scala> println(-2*(g-k)+c);
+      4.6000004
 
-  scala> println(-2*(g-k)+c)
-   4.6000004
+  d) scala> println(postFixd(c))
+     4
 
-  scala> c=c+1
-  // mutated c
-
-  scala> println(c)
-  5
-
-  scala> println(c*a)
-  15
+  e) scala> println(preFix(c)*postFixd(a))
+     10
+  
 
 
 4) a)scala> def total(normalWorking:Double,OT:Double):Double= 250*normalWorking +85*OT
